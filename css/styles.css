@@ -70,7 +70,9 @@ h2 {
 
 .square {
   border: 1px solid rgba(0, 0, 0, 0.75);
+  font-size: 96px;
   height: 150px;
+  line-height: 150px;
   user-select: none;
   width: 150px;
 }
