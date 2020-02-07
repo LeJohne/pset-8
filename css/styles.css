@@ -1,3 +1,6 @@
+
+
+
 /*
  * Sets the overall styles for the page. There aren't many. All text
  * is centered, and the font is a monospaced Roboto (from Google).
@@ -5,11 +8,14 @@
 
 body {
   text-align: center;
+  color: rgba(255, 250, 250, 0.8);
   font-family: "Roboto", monospace;
+  background: url("../img/lofiback.gif") no-repeat center center fixed;
+  background-size: cover;
 }
 
 /*
- * The header has a different font than the rest of the page. It's the
+* The header has a different font than the rest of the page. It's the
  * title, so it makes sense to make it a little different (and bigger).
  */
 
@@ -18,6 +24,17 @@ h1 {
   font-family: "Major Mono Display", monospace;
   font-size: 48px;
   margin: 2%;
+  background-blend-mode: color-dodge;
+  color: white;
+}
+
+#title {
+  background-color: black;
+  border: 5px solid black;
+  color: white;
+  line-height: 55px;
+  text-align: center;
+  width: auto;
 }
 
 /*
@@ -29,6 +46,18 @@ h2 {
   font-size: 36px;
   font-weight: lighter;
   margin: 2%;
+  color: white;
+}
+
+#subtitle {
+  background-color: black;
+  border: 5px solid black;
+  color: white;
+  font-size: 25px;
+  line-height: 55px;
+  margin: 1%;
+  text-align: center;
+  width: 456px;
 }
 
 /*
@@ -75,6 +104,7 @@ h2 {
   line-height: 150px;
   user-select: none;
   width: 150px;
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 /*
@@ -82,7 +112,7 @@ h2 {
  */
 
 .square:hover {
-  background-color: lightgray;
+  background-color: rgba(105, 105, 105, 0.8);
   cursor: pointer;
 }
 
@@ -91,9 +121,9 @@ h2 {
  */
 
 #reset-button {
-  background-color: white;
-  border: 1px solid black;
-  color: black;
+  background-color: black;
+  border: 5px solid black;
+  color: white;
   font-size: 21px;
   line-height: 55px;
   margin: 1%;
@@ -107,7 +137,7 @@ h2 {
  */
 
 #reset-button:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   cursor: pointer;
 }
