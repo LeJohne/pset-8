@@ -19,6 +19,7 @@ let win;
 
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
+const victoryAudio = document.getElementById("victory");
 
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 
@@ -35,6 +36,8 @@ function init() {
   win = null;
 
   render();
+  victoryAudio.pause();
+  victoryAudio.currentTime = 0;
 }
 
 function render() {
@@ -53,9 +56,14 @@ function takeTurn(e) {
     });
 
     if (board[index] === "") {
-      board[index] = turn;
-      turn = turn === "X" ? "O" : "X";
-      win = getWinner();
+       board[index] = turn;
+       turn = turn === "X" ? "O" : "X";
+       win = getWinner();
+       if (win === "X") {
+           victoryAudio.play();
+       } else if (win === "O") {
+           victoryAudio.play();
+       }
 
       render();
     }
@@ -74,6 +82,5 @@ function getWinner() {
       winner = board[condition[0]];
     }
   });
-
   return winner ? winner : board.includes("") ? null : "T";
 }
