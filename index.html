@@ -22,25 +22,37 @@
     <source src="audio/victory.mp3" type="audio/mpeg">
   </audio>
 
-  <h1 id = "title">tic | tac | toe</h1>
+    <h1 id = "title">tic | tac | toe</h1>
 
-  <div class="container column">
-    <h2 id = "subtitle">Turn: X</h2>
+    <div class="container column">
+      <h2 id = "subtitle">Turn: O</h2>
 
-    <div class="container wrap" id="board">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
+      <div class="container wrap" id="board">
+	<table>
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+		</tr>
+	</table>
+  </div>
+
+	<div class="endgame">
+		<div class="text"></div>
+	</div>
+	<button id="reset-button" onClick="startGame()">Play Again!</button>
     </div>
 
-    <div id="reset-button">Play Again!</div>
-  </div>
 </body>
 
 </html>

@@ -60,6 +60,23 @@ h2 {
   width: 456px;
 }
 
+.text {
+  background-color: black;
+  border: 5px solid black;
+  color: white;
+  font-size: 21px;
+  line-height: 55px;
+  margin: 1%;
+  text-align: center;
+  width: 456px;
+  font-family: "Roboto", monospace;
+}
+
+.endgame{
+  padding-top: 1%;
+  text-align: center;
+}
+
 /*
  * The container is a flex-box, which is a powerful layout tool. It grows
  * dyanamically, and allows us to position our elements with precision.
@@ -97,7 +114,7 @@ h2 {
  * The square itself. We give it a specific size and border.
  */
 
-.square {
+.cell {
   border: 1px solid rgba(0, 0, 0, 0.75);
   font-size: 96px;
   height: 150px;
@@ -111,7 +128,7 @@ h2 {
  * And we give it a little flare when the user mouses over a square.
  */
 
-.square:hover {
+.cell:hover {
   background-color: rgba(105, 105, 105, 0.8);
   cursor: pointer;
 }
@@ -129,6 +146,7 @@ h2 {
   margin: 1%;
   text-align: center;
   width: 456px;
+  font-family: "Roboto", monospace;
 }
 
 /*
