@@ -21,7 +21,7 @@ startGame();
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function startGame() {
-	document.querySelector(".endgame").style.display = "none";
+	document.querySelector("#subtitle").innerHTML = "Turn: O";
 	origBoard = Array.from(Array(9).keys());
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].innerText = '';
@@ -69,8 +69,8 @@ function gameOver(gameWon) {
 }
 
 function declareWinner(who) {
-	document.querySelector(".endgame").style.display = "block";
-	document.querySelector(".endgame .text").innerText = who;
+	document.querySelector("#subtitle").style.display = "block";
+	document.querySelector("#subtitle").innerText = who;
 }
 
 function emptySquares() {
