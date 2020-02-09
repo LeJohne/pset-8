@@ -159,3 +159,13 @@ h2 {
   color: black;
   cursor: pointer;
 }
+
+.fa-play-circle-o{
+  font-size: 60px;
+  color: white;
+}
+
+.fa-pause-circle-o{
+  font-size: 60px;
+  color: white;
+}
