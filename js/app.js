@@ -14,6 +14,9 @@ const winCombos = [
 	[6, 4, 2]
 ]
 
+const PAUSE = "fa-play-circle";
+const PLAY = "fa-pause-circle";
+
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 
 const cells = document.querySelectorAll('.cell');
@@ -143,3 +146,30 @@ function minimax(newBoard, player) {
 
 	return moves[bestMove];
 }
+
+function music(toDo, id, done, trash){
+
+  const STATUS = done ? PLAY : PAUSE;
+
+  const item = `<li class="item">
+                <i class="fa ${STATUS} " job="priority" id="${id}"></i>
+                </li>`;
+  const position = "beforeend";
+
+  list.insertAdjacentHTML(position, item);
+}
+
+list.addEventListener("click", function(event){
+  const element = event.target;
+  const elementJob = element.attributes.job.value;
+
+  if(elementJob == "complete"){
+    completeToDo(element);
+  }else if(elementJob == "delete"){
+    removeToDo(element);
+  }else if(elementJob == "priority"){
+    priorityToDo(element); priority(element)
+  }
+
+  localStorage.setItem("TODO", JSON.stringify(LIST));
+});
