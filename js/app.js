@@ -63,6 +63,8 @@ function checkWin(board, player) {
 	return gameWon;
 }
 
+//changes the color of tiles when you win
+
 function gameOver(gameWon) {
 	for (let index of winCombos[gameWon.index]) {
 		document.getElementById(index).style.backgroundColor =
