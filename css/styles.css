@@ -162,10 +162,28 @@ h2 {
 
 .fa-play-circle-o{
   font-size: 60px;
+  position: absolute;
+  left: 91%;
+  top: 15%;
   color: white;
 }
 
 .fa-pause-circle-o{
   font-size: 60px;
+  position: absolute;
+  left: 91%;
+  top: 15%;
   color: white;
+}
+
+.fa-play-circle-o:hover{
+  font-size: 60px;
+  color: grey;
+  cursor: pointer;
+}
+
+.fa-pause-circle-o:hover{
+  font-size: 60px;
+  color: grey;
+  cursor: pointer;
 }
