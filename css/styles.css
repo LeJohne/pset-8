@@ -175,9 +175,3 @@ h2 {
   top: 15%;
   color: white;
 }
-
-.fa-play-circle-o:hover{
-  font-size: 60px;
-  color: grey;
-  cursor: pointer;
-}
