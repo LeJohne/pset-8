@@ -19,6 +19,7 @@ const PLAY = "fa-pause-circle";
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 
+const victoryAudio = document.getElementById("victory");
 const cells = document.querySelectorAll('.cell');
 startGame();
 
@@ -26,6 +27,8 @@ startGame();
 function startGame() {
 	document.querySelector("#subtitle").innerHTML = "Turn: O";
 	origBoard = Array.from(Array(9).keys());
+	victoryAudio.pause();
+	victoryAudio.currentTime = 0;
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].innerText = '';
 		cells[i].style.removeProperty('background-color');
@@ -74,6 +77,7 @@ function gameOver(gameWon) {
 function declareWinner(who) {
 	document.querySelector("#subtitle").style.display = "block";
 	document.querySelector("#subtitle").innerText = who;
+	 victoryAudio.play();
 }
 
 function emptySquares() {
