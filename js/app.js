@@ -76,6 +76,8 @@ function gameOver(gameWon) {
 	declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
 }
 
+//decalres winner and plays audio
+
 function declareWinner(who) {
 	document.querySelector("#subtitle").style.display = "block";
 	document.querySelector("#subtitle").innerText = who;
