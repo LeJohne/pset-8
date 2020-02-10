@@ -159,11 +159,3 @@ h2 {
   color: black;
   cursor: pointer;
 }
-
-.fa-play-circle-o{
-  font-size: 60px;
-  position: absolute;
-  left: 91%;
-  top: 15%;
-  color: white;
-}
